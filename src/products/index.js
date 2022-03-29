@@ -11,7 +11,7 @@ module.exports.ProductsAPI = (app) => {
         .post('/', ProductsController.createProduct) // http://localhost:3000/api/products/
         .post('/update', ProductsController.updateProduct) // http://localhost:3000/api/products/update
         .put('/delete/:name', ProductsController.deleteProduct) // http://localhost:3000/api/products/delete/id
-        .get('/:id', ProductsController.getProduct) // http://localhost:3000/api/products/id
+        .get('/:id', ProductsController.getProduct); // http://localhost:3000/api/products/id
 
     app.use('/api/products', router);
 }

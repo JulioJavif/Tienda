@@ -25,7 +25,7 @@ module.exports.NotFoundAPI = (app) => {
     const router = express.Router();
 
     router.all('*', (req, res) => {
-        Response.error(res, new createError.NotFound)
+        Response.error(res, new createError.NotImplemented);
     });
 
     app.use('/', router);

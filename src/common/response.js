@@ -2,6 +2,7 @@ const createError = require("http-errors");
 
 module.exports.Response = {
     success: (res, status = 200, message = 'OK', body = {}) => {
+        //let header = "https://http.cat/".concat(status);
         res.status(status).json({message, body});
     },
     error: (res, error = null) => {
